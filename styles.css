@@ -125,6 +125,10 @@ button:active {
     width: 30%;
     transition: 0.3s ease-in-out;
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    max-height: 70vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
@@ -135,6 +139,12 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    margin-bottom: 15px;
+    background: inherit;
+    padding: 10px 0;
+    z-index: 1;
 }
 
 #error-message {
@@ -149,6 +159,12 @@ h2 {
 .book-list {
     list-style: none;
     padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 rgba(30, 30, 30, 0.5);
+    padding-right: 10px;
 }
 
 .book-list li {
@@ -184,6 +200,9 @@ h2 {
     color: #4CAF50;
     border: 2px solid #4CAF50;
     font-weight: 600;
+    position: sticky;
+    top: 0;
+    margin-bottom: 15px;
 }
 
 #comparison-text {
@@ -207,4 +226,23 @@ h1, h2 {
 #login-section, #tracker-section {
     position: relative;
     z-index: 1;
+}
+
+/* Style the scrollbar for webkit browsers (Chrome, Safari, etc.) */
+.book-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.book-list::-webkit-scrollbar-track {
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 10px;
+}
+
+.book-list::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 10px;
+}
+
+.book-list::-webkit-scrollbar-thumb:hover {
+    background: #66bb6a;
 }
