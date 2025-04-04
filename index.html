@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body role="document">
+    <!-- Add this video background container -->
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="book.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <!-- Logo Section -->
+    <header class="logo-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/2702/2702134.png" alt="Reading Progress Tracker Logo" class="logo">
+        <h1 class="app-title" role="heading" aria-level="1">Reading Progress Tracker</h1>
+    </main>
+
+    <!-- Login Section -->
+    <main id="login-section" role="main">
+        <h1>Enter Your Name</h1>
+            <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="authenticateUser()">Login</button>
+        <p id="error-message"></p>
+    </main>
+
+    <!-- Tracker Section -->
+    <div id="tracker-section" class="hidden">
+        <h1 id="welcome-message"></h1>
+            <input type="text" id="book-title" placeholder="Enter book title">
+        <button onclick="addBook()">Add Book</button>
+
+        <div class="book-lists">
+            <div class="user-books">
+                <h2>Your Books</h2>
+                <div class="books-counter" id="user-books-counter">Total Books: 0</div>
+                <ul id="user-books-list" class="book-list"></ul>
+            </div>
+            <div class="comparison">
+                <h2>Comparison</h2>
+                <p id="comparison-text"></p>
+            </div>
+            <div class="other-user-books">
+                <h2 id="other-user-heading"></h2>
+                <div class="books-counter" id="other-books-counter">Total Books: 0</div>
+                <ul id="other-user-books-list" class="book-list"></ul>
+            </div>
+        </div>
+
+        <button id="home-button" onclick="goHome()">Home</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
