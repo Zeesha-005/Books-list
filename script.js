@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (usernameInput === "") {
             document.getElementById("error-message").innerText = "Please enter your name.";
             return;
-        } else if (usernameInput !== "Firdose Ara" && usernameInput !== "Zeeshan") {
+        } else if (usernameInput !== "Firdose Ara" && usernameInput !== "Mohammed Zeeshan") {
             document.getElementById("error-message").innerText = "Invalid username! Please enter Firdose Ara or Zeeshan.";
             return;
         }
